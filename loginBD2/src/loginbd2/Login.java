@@ -5,6 +5,8 @@
  */
 package loginbd2;
 
+import java.awt.Color;
+
 /**
  *
  * @author alumno
@@ -16,6 +18,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.getContentPane().setBackground(Color.decode("#1f2029"));  
     }
 
     /**
@@ -29,36 +32,101 @@ public class Login extends javax.swing.JFrame {
 
         jPasswordClave = new javax.swing.JPasswordField();
         jTextFieldUsuario = new javax.swing.JTextField();
+        jButtonIniciar = new javax.swing.JButton();
+        jButtonregistrarse = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabeltextologin = new javax.swing.JLabel();
+        jLabelnombresuario = new javax.swing.JLabel();
+        jLabeltextoclave = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPasswordClave.setText("jPasswordField1");
 
-        jTextFieldUsuario.setText("jTextField1");
+        jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldUsuarioActionPerformed(evt);
+            }
+        });
+
+        jButtonIniciar.setText("Iniciar");
+
+        jButtonregistrarse.setText("Registrarse");
+        jButtonregistrarse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonregistrarseActionPerformed(evt);
+            }
+        });
+
+        jLabeltextologin.setText("L O G I N");
+
+        jLabelnombresuario.setText("Usuario");
+
+        jLabeltextoclave.setText("Contraseña");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPasswordClave, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                    .addComponent(jTextFieldUsuario))
-                .addGap(30, 30, 30))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonIniciar)
+                .addGap(100, 100, 100))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPasswordClave, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelnombresuario)
+                            .addComponent(jLabeltextoclave))))
+                .addGap(0, 54, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jLabeltextologin))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(jButtonregistrarse)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
+                .addGap(29, 29, 29)
+                .addComponent(jLabeltextologin)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelnombresuario)
+                .addGap(3, 3, 3)
                 .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(31, 31, 31)
+                .addComponent(jLabeltextoclave)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addComponent(jButtonIniciar)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonregistrarse)
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextFieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
+
+    private void jButtonregistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonregistrarseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonregistrarseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,7 +164,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonIniciar;
+    private javax.swing.JButton jButtonregistrarse;
+    private javax.swing.JLabel jLabelnombresuario;
+    private javax.swing.JLabel jLabeltextoclave;
+    private javax.swing.JLabel jLabeltextologin;
     private javax.swing.JPasswordField jPasswordClave;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }
