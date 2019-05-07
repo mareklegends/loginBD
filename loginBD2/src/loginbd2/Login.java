@@ -18,7 +18,19 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        this.getContentPane().setBackground(Color.decode("#1f2029"));  
+        this.setLocationRelativeTo(null);
+        this.setTitle("Login");
+        this.getContentPane().setBackground(Color.decode("#1f2029"));
+
+        jLabelnombresuario.setForeground(Color.decode("#fafafa"));
+        jLabeltextoclave.setForeground(Color.decode("#fafafa"));
+        jLabeltextologin.setForeground(Color.decode("#fafafa"));
+
+        jButtonIniciar.setForeground(Color.BLACK);
+        jButtonIniciar.setBackground(Color.WHITE);
+
+        jButtonregistrarse.setForeground(Color.BLACK);
+        jButtonregistrarse.setBackground(Color.WHITE);
     }
 
     /**
@@ -52,6 +64,11 @@ public class Login extends javax.swing.JFrame {
         jButtonIniciar.setText("Iniciar");
 
         jButtonregistrarse.setText("Registrarse");
+        jButtonregistrarse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonregistrarseMouseClicked(evt);
+            }
+        });
         jButtonregistrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonregistrarseActionPerformed(evt);
@@ -73,26 +90,25 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jButtonIniciar)
                 .addGap(100, 100, 100))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPasswordClave, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelnombresuario)
-                            .addComponent(jLabeltextoclave))))
-                .addGap(0, 54, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPasswordClave, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelnombresuario)
+                    .addComponent(jLabeltextoclave))
+                .addGap(0, 52, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(99, 99, 99)
                         .addComponent(jLabeltextologin))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
+                        .addGap(78, 78, 78)
                         .addComponent(jButtonregistrarse)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -102,9 +118,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabeltextologin)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelnombresuario)
-                .addGap(3, 3, 3)
+                .addGap(15, 15, 15)
+                .addComponent(jLabelnombresuario, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jLabeltextoclave)
@@ -114,7 +130,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jButtonIniciar)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonregistrarse)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         pack();
@@ -127,6 +143,16 @@ public class Login extends javax.swing.JFrame {
     private void jButtonregistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonregistrarseActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonregistrarseActionPerformed
+
+    private void jButtonregistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonregistrarseMouseClicked
+        // TODO add your handling code here:
+
+        Register ven = new Register();
+        this.setVisible(false);
+        this.dispose();
+        ven.setVisible(true);
+
+    }//GEN-LAST:event_jButtonregistrarseMouseClicked
 
     /**
      * @param args the command line arguments
