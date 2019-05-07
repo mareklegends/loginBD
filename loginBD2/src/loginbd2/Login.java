@@ -24,7 +24,8 @@ public class Login extends javax.swing.JFrame {
 
         jLabelnombresuario.setForeground(Color.decode("#fafafa"));
         jLabeltextoclave.setForeground(Color.decode("#fafafa"));
-        jLabeltextologin.setForeground(Color.decode("#fafafa"));
+        jLabeltextologin.setForeground(Color.decode("#fafafa"));  
+        
 
         jButtonIniciar.setForeground(Color.BLACK);
         jButtonIniciar.setBackground(Color.WHITE);
