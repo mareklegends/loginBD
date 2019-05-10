@@ -32,6 +32,7 @@ public class Login extends javax.swing.JFrame {
 
         jButtonregistrarse.setForeground(Color.BLACK);
         jButtonregistrarse.setBackground(Color.WHITE);
+        BD.conectar();
     }
 
     /**

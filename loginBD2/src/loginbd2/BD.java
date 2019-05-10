@@ -34,6 +34,9 @@ public class BD {
             String sql = "SELECT * FROM usuarios";
             PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(sql);
+            
+           
+            
             // ... 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -46,6 +49,8 @@ public class BD {
                 System.out.println(ex.getMessage());
             }
         }
+
+
     }
 
 }
