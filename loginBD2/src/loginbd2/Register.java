@@ -6,6 +6,8 @@
 package loginbd2;
 
 import java.awt.Color;
+import java.security.cert.PKIXRevocationChecker;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -64,6 +66,11 @@ public class Register extends javax.swing.JFrame {
         jPasswordField1.setText("jPasswordField1");
 
         jButtonRegistro.setText("Register");
+        jButtonRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistroActionPerformed(evt);
+            }
+        });
 
         jButtonLogin.setText("Login");
         jButtonLogin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -157,6 +164,19 @@ public class Register extends javax.swing.JFrame {
         ven.setVisible(true);
 
     }//GEN-LAST:event_jButtonLoginMouseClicked
+
+    private void jButtonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroActionPerformed
+        // TODO add your handling code here:
+        String valorPass = new String(jPasswordField1.getPassword());  
+      
+        
+        if (BD.registrarse(jTextFieldUsuario.getText(), valorPass, jTextField1.getText())==1) {
+            JOptionPane.showMessageDialog(null, "Se registro perfectamente");
+        } else {
+            JOptionPane.showMessageDialog(null, "Datos no validos");
+        }
+        
+    }//GEN-LAST:event_jButtonRegistroActionPerformed
 
     /**
      * @param args the command line arguments

@@ -53,5 +53,46 @@ public class BD {
         }
 
     }
+    
+     public static int registrarse(String usuario, String clave, String fecha) {
+
+         int resultado=0;
+        Connection conn = null;
+        try {
+            // db parameters
+            String url = "jdbc:mysql://192.168.4.238:3306/javatext";
+            String user = "java";
+            String password = "javajava";
+
+            // create a connection to the database
+            conn = DriverManager.getConnection(url, user, password);
+            // more processing here
+
+         
+            PreparedStatement ps2 = (PreparedStatement) conn.prepareStatement("Insert usuarios values(0, ?, ?, ?)");
+            ps2.setString(1, usuario);
+            ps2.setString(2, clave);
+            ps2.setString(3, fecha);
+            int rs2 = ps2.executeUpdate();
+
+            if(rs2>0){
+                return resultado=1;
+            }
+
+            // ... 
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
+
+    }
 
 }
