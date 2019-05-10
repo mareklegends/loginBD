@@ -167,7 +167,9 @@ public class Register extends javax.swing.JFrame {
 
     private void jButtonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroActionPerformed
         // TODO add your handling code here:
-        String valorPass = new String(jPasswordField1.getPassword());  
+        String valorPass = new String(jPasswordField1.getPassword());         
+        
+        
       
         
         if (BD.registrarse(jTextFieldUsuario.getText(), valorPass, jTextField1.getText())==1) {
